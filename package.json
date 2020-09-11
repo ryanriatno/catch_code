@@ -4,5 +4,21 @@
   "main": "index.js",
   "author": "RYan Riatno",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "parcel build public/index.html --no-source-maps"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.10",
+    "unfetch": "^4.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.0.2",
+    "jest": "^26.4.2",
+    "typescript": "^4.0.2"
+  }
 }
