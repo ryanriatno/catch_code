@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCard /> test case Render Header without error 1`] = `
+<div>
+  <div
+    class="product__lists"
+  >
+    <div
+      class="product__lists-cover"
+    >
+      <img
+        alt=""
+        src="https://s.catch.com.au/images/product/0001/1909/5d47c0d64988e613254534_w200.jpg"
+      />
+    </div>
+    <div
+      class="product__lists-detail"
+    >
+      <h4
+        class="product__lists-name"
+      >
+        Shoe
+      </h4>
+      <span
+        class="product__sale-price"
+      >
+        $12.34
+      </span>
+      <span
+        class="product__price"
+      >
+        $12.34
+      </span>
+    </div>
+  </div>
+</div>
+`;
