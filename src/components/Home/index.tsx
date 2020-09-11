@@ -3,12 +3,12 @@ import Header from '../../components/Header'
 import fetch from 'unfetch'
 import ProductCard from '../ProductCard'
 
-const Home: React.FC<{ retailPrice: number}> = ({ retailPrice = 0}) => {
+const Home = () => {
   const [metaData, setMetadata] = useState(null)
   const [products, setProducts] = useState([])
   
   useEffect(() => {
-    fetch('https://catch-code-challenge.s3-website-ap-southeast-2.amazonaws.com/challenge-3/response.json')
+    fetch('http://catch-code-challenge.s3-website-ap-southeast-2.amazonaws.com/challenge-3/response.json')
     .then( res => res.json() )
     .then( data => {
       setMetadata(data.metadata)

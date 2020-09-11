@@ -29,6 +29,19 @@
       margin: 1em 0;
       display: block;
     }
+    &-cover {
+      position: relative;
+    }
+    &-sold-out {
+      background: red;
+      color: white;
+      font-size: 14px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: .5em 1em;
+      font-weight: bold;
+    }
     &-name {
       height: 48px;
       overflow: hidden;
