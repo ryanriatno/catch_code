@@ -1,0 +1,8 @@
+{
+  "name": "catch_code_challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "RYan Riatno",
+  "license": "MIT",
+  "private": true
+}
