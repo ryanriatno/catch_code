@@ -11,3 +11,6 @@ We don't need to use create react app as this is just a simple project and we do
 * Invoke `yarn`
 * Run `yarn start` to start
 * Run `yarn test` to start unit tests
+
+## How to Build
+* Run `yarn build` and the output would be on `dist` folder. You can use simple http server like `serve` or `python SimpleHTTPServer`.
