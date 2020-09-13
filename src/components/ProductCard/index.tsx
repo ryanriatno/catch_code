@@ -19,6 +19,8 @@ const ProductCard: React.FC<Props> = (props) => {
   useEffect(() => {
     if (props.retailPrice > 0) {
       setOnSales(true)
+    }else{
+      setOnSales(false)
     }
   }, [props.retailPrice])
 
@@ -26,20 +28,20 @@ const ProductCard: React.FC<Props> = (props) => {
     <div className="product__lists" key={props.id}>
       <div className="product__lists-cover">
         <img src={props.imageUrl} alt="" />
-        {(props.quantityAvailable < 1) ? <span>SOLD OUT</span> : null}
+        {(props.quantityAvailable < 1) ? <span data-testid="soldout" className="product__lists-sold-out">SOLD OUT</span> : null}
       </div>
       <div className="product__lists-detail">
         <h4 className="product__lists-name">{props.name}</h4>
         {
           (onSales) ?
-            <span className="product__sale-price">{convertCurrency(props.salePrice)}</span>
+            <span data-testid="retail-price" className="product__sale-price">{convertCurrency(props.retailPrice)}</span>
             : null
         }
         {
           (onSales) ?
-          <span className="product__price">{convertCurrency(props.salePrice)}</span>
+          <span data-testid="price" className="product__price">{convertCurrency(props.salePrice)}</span>
           :
-          <span className="product__price">{convertCurrency(props.retailPrice)}</span>
+          <span data-testid="price" className="product__price">{convertCurrency(props.retailPrice)}</span>
         }
       </div>
     </div>

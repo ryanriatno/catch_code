@@ -23,11 +23,13 @@ exports[`<ProductCard /> test case Render Header without error 1`] = `
       </h4>
       <span
         class="product__sale-price"
+        data-testid="retail-price"
       >
-        $12.34
+        $43.21
       </span>
       <span
         class="product__price"
+        data-testid="price"
       >
         $12.34
       </span>

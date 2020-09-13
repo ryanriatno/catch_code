@@ -6,6 +6,7 @@ import ProductCard from '../ProductCard'
 const Home = () => {
   const [metaData, setMetadata] = useState(null)
   const [products, setProducts] = useState([])
+  const [sortedBy, setSortedBy] = useState('asc')
   
   useEffect(() => {
     fetch('http://catch-code-challenge.s3-website-ap-southeast-2.amazonaws.com/challenge-3/response.json')
@@ -18,12 +19,14 @@ const Home = () => {
 
   const sortByHighestPrice = () => {
     const ascendingPrice = products.sort((a: any, b: any) => {
+      setSortedBy('asc')
       return (b.retailPrice) - (a.retailPrice)
     })
     return setProducts(() => [...ascendingPrice])
   }
   const sortByLowestPrice = () => {
     const descendingPrice = products.sort((a: any, b: any) => {
+      setSortedBy('desc')
       return (a.retailPrice) - (b.retailPrice)
     })
     return setProducts(() => [...descendingPrice])
@@ -41,6 +44,7 @@ const Home = () => {
     <div className="container">
       <Header
         handleSortingPrice={handleSortingPrice}
+        sortedBy={sortedBy}
       />
       <main className="main">
         <div className="product">

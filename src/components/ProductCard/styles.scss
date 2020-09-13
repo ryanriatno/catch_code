@@ -23,8 +23,9 @@
     position: relative;
     flex: 0 0 10%;
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: 10px 5px;
     margin: 5px;
+    min-width: 230px;
     &-price {
       margin: 1em 0;
       display: block;
@@ -37,8 +38,8 @@
       color: white;
       font-size: 14px;
       position: absolute;
-      right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       padding: .5em 1em;
       font-weight: bold;
     }
